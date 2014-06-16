@@ -2,6 +2,19 @@
 	<head>
 		<script src="js/mail-generator.js"></script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script>
+    var $body = $('#body');
+    var $subject = $('subject');
+    var $sender = $('#sender');
+    var $date = $('#date');
+    
+    $.each(geemails, function(index, geemail){
+    
+    $('#subject').append('<li>' + geemail.subject);
+    });
+    </script> 
 	</head>
 	<body>
 		<div class="container" id="main">
