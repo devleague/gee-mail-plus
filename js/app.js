@@ -1,7 +1,7 @@
 //STEP 3  page loads, via JavaScript access 
 //prepopulated data stored in window.geemails variable
 
-
+loadGeeMails();
 
  // STEP 6 RETURNS NEWLY CREATED MSG
 
@@ -11,10 +11,11 @@ setTimeout (function() {getNewMessage()}, 3000);
 
 //puts messages in browser according to
 //date, sender and subject
-//var subject = generateMessage();
-$dates = $('#dates');
-$.each(subject, function(index, subject) {
-  $('#dates').append('<div>' + subject.dates + '</div>');
+$dates = $('#dates');//create jQuery object
+$.each(generateMessage, function(index, generateMessage) {// Iterate over a 
+  //jQuery object, executing a function for each matched element.
+  $('#dates').append('<div>' + generateMessage.dates + '</div>');//For the id
+  //dates, should append the date from message.date in function generateMessage(date)
 }); 
 
 $senders = $('#senders');
