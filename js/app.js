@@ -2,12 +2,7 @@
 //prepopulated data stored in window.geemails variable
 
 loadGeeMails();
-
- // STEP 6 RETURNS NEWLY CREATED MSG
-
-//gets messages
-setTimeout (function() {getNewMessage()}, 3000);
-    console.log(getNewMessage());
+//console.log(window.geemails);
 
 //puts messages in browser according to
 //date, sender and subject
@@ -27,4 +22,18 @@ $subjects = $('#subjects');
 $.each(subject, function(index,subject) {
   $('#subjects').append('<div>' + subject.senders + "</div");
 });    
+
+
+// STEP 6 RETURNS NEWLY CREATED MSG
+//gets messages
+var newMessage = setInterval (function() {getNewMessage()}, 2000);
+  function getNewMessage() {
+    var testDate = document.getElementById('#dates');
+    testDate.innerHTML = getRandomDate;
+    // var now = getRandomDate();
+    // document.getElementById('#dates').innerHTML = now;
+  }
+    console.log(getNewMessage());
+
+
 
