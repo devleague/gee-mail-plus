@@ -1,0 +1,120 @@
+.container {
+  font-size: 50;
+  font-family: Arial;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  background-color: #EDCD54;
+  width: 100%;
+}
+
+
+img {
+  padding-top: 50px;
+  height: 150px;
+  width: 175px;
+}
+
+
+#inbox {
+  font: Verdana;
+  font-size: 20px;
+  width: 10%;
+  float: left;
+}
+
+#inboxCounter {
+  font: Verdana;
+  font-size: 20px;
+  width: 30%;
+  float: left;
+  counter-increment: Counter;
+}
+
+#inboxCounter:after {
+  content: counter(Counter);
+}
+
+#inboxCounter: nth-child() {
+  counter-reset: (Counter);
+}
+
+.second_row {
+  background-color: #3ABDFF;
+  width: 100%;
+  float: left;
+}
+
+#date {
+  font: Verdana;
+  font-size: 20px;
+  width: 30%;
+  float: left;
+  display: inline;
+  text-transform: uppercase;
+}
+
+#subject {
+  font: Verdana;
+  font-size: 20px;
+  width: 40%;
+  display: inline;
+  text-transform: uppercase;
+}
+
+#sender {
+  font: Verdana;
+  font-size: 20px;
+  width: 30%;
+  float: right;
+  display: inline;
+  text-transform: uppercase;
+}
+/*
+
+.third_row {
+  width: 100%;
+  float: left;
+}
+
+#dates {
+  font: Verdana;
+  font-size: 20px;
+  width: 30%;
+  float: left;
+}
+
+#subjects {
+  font: Verdana;
+  font-size: 20px;
+  width: 40%;
+  float: left;
+
+}
+
+#senders {
+  font: Verdana;
+  font-size: 20px;
+  width: 30%;
+  float: left;
+}
+
+
+A:visited { 
+  color:black; 
+  text-decoration: none; 
+  font-weight: normal;
+}
+
+
+A:active { 
+  color: black; 
+  text-decoration:none;
+}*/
+
+/*
+A:hover {
+  color: blue; 
+  text-decoration: none; 
+  font-weight: none;
+}*/
