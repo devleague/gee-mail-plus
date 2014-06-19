@@ -1,3 +1,10 @@
+ /*
+          <li class="email">
+            <span class="sender">Sender</span>
+            <span class="subject">Subject</span>
+            <span class="date">Date</span>
+          </li>
+ */
  $(document).ready(function(){
 
     var $body = $('#body');
