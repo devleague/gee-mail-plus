@@ -48,6 +48,6 @@ function getRandomDate(){
 	loadGeeMails();	
 
 console.log(window.geemails);
-console.log(loadGeeMails);
+// console.log(loadGeeMails);
 })();
 

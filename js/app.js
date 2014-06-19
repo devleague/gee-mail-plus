@@ -8,7 +8,7 @@
     $.each(geemails, function(index, obj){
       
     // $('#subject').html(obj[]);
-    console.log(geemails[index].subject);
+    console.log(obj);
     });
 
     });
