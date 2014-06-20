@@ -31,7 +31,7 @@ var newMessage = setInterval(function() {displayNewMessage()}, 2000);
     var now = getRandomDate();
     //console.log($('#dates'));
     //console.log(document.getElementById('dates'));
-    document.getElementById('dates').innerHTML = now;
+    document.getElementById('newEmailDate').innerHTML = now;
 };
 
 var myMessage = getNewMessage();
@@ -43,7 +43,7 @@ console.log(myMessage);
     //make new html elements for emails to be populated#######
 
   for (var i = 0; i < geemails.length; i++) { 
-    $('#emailList').append('<li><span>' + geemails[i].date + '</span>' + '<span>'geemails[i].sender + geemails[i].subject + '<li>');  
+    $('#emailList').append('<li><span>' + geemails[i].date + '</span>' + '<span>' + geemails[i].sender + '</span>' + '<span>' + geemails[i].subject + '</span><li>');  
     // console.log(geemails[i]);
     // console.log("date: " + geemails[i].date);
     // console.log("date: " + geemails[i].subject);
