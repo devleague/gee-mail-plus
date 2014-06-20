@@ -1,20 +1,24 @@
-div#gee-mail-area ul li#email span.sender {
+div#gee-mail-area ul li.email span.sender {
 	font-family: Arial;
 	font-size: 14px;
-	float: left;
+	/*float: left;*/
 	width: 30%;
 }
 
-div#gee-mail-area ul li#email span.subject {
+div#gee-mail-area ul li.email span.subject {
 	font-family: Arial;
 	font-size: 14px;
-	float: left;
+	/*float: left;*/
 	width: 30%;
 }
 
-div#gee-mail-area ul li#email span.date {
+div#gee-mail-area ul li.email span.date {
 	font-family: Arial;
 	font-size: 14px;
-	float: right;
+	/*float: right;*/
 	width: 30%;
+}
+
+span {
+	display: inline-block;
 }
