@@ -54,15 +54,9 @@ console.log(myMessage);
     // $('#senders').append('<span>' + sender + '</span>');
     // $('#subjects').append('<span>' + subject + '</span>');
   }
-    console.log(getNewMessage());
+  
+ //SHOWING BODY OF MESSAGE WHEN IT IS CLICKED
 
-
-// function() {
-// for (i = 0; i < window.geemails.length, i++) {
-//   $("#subjects").append("<div> Subject: " + window.geemails[i].subject + "sender: " + window.geemails[i].sender + "</div>" );
-
-// }
-// };
     
 
 
