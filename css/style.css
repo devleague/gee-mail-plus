@@ -22,3 +22,7 @@ div#gee-mail-area ul li.email span.date {
 span {
 	display: inline-block;
 }
+
+li {
+	list-style-type: none;
+}

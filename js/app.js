@@ -1,3 +1,4 @@
+
 (function () {
 
     var inbox = $('#inbox');
@@ -17,5 +18,15 @@
       inbox.append(li);
   
     }); // closes $.each(geemails)
+
+ 
+ $(document).ready(function(){
+
+  $( "button" ).click(function() {
+  $( "p" ).toggle( "slow" );
+});
+
+
+
 
 })();  
