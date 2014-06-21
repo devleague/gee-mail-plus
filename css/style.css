@@ -1,20 +1,22 @@
 .container {
-  font-size: 50;
-  font-family: Arial;
+  font-size: 40;
+  font-family: Veranda;
   color: white;
   text-align: center;
-  font-weight: bold;
   background-color: #EDCD54;
   width: 100%;
+  float: right; 
+  letter-spacing: 50px;  
 }
 
 
 img {
-  padding-top: 50px;
   height: 150px;
   width: 175px;
+  padding-top: 25px;
+  float: left;
+  padding-left: 25px;
 }
-
 
 #inbox {
   font: Verdana;
@@ -70,8 +72,9 @@ img {
   display: inline;
   text-transform: uppercase;
 }
-/*
 
+
+/*
 .third_row {
   width: 100%;
   float: left;
