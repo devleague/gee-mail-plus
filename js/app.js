@@ -2,6 +2,11 @@
 (function () {
 
     var inbox = $('#inbox');
+    var inBoxCount = $('#inBoxCounter');
+
+    setTimeout(getNewMessage(){
+
+      alert("Hello")}, 3000);
 
     for(var i= 0; i < geemails.length; i++){
       console.log(i);
@@ -19,6 +24,8 @@
       li.append(body_field);
       
       inbox.append(li);
+
+      // inBoxCount.append.html[i];
   
     } // closes $.each(geemails)
 
