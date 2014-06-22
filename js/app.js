@@ -3,28 +3,31 @@
 
     var inbox = $('#inbox');
 
-    $.each(geemails, function(index, obj){
-      console.log(obj);
+    for(var i= 0; i < geemails.length; i++){
+      console.log(i);
 
-    var li = $('<li><li>');
-      var date_field = $('<span>' + obj.date + '</span>');
-      var sender_field = $('<span>' + obj.sender + '</span>');
-      var subject_field = $('<span>' + obj.subject + '</span>');
+      var li = $('<li class="mailMessageShow"></li>');
+          
+      var sender_field = $('<span>' + geemails[i].sender + '</span>');
+      var date_field = $('<span>' + geemails[i].date + '</span>');
+      var subject_field = $('<span>' + geemails[i].subject + '</span>');
+      var body_field = $('<p>' + geemails[i].body + '</p>')
 
-      li.append(date_field);
-      li.append(subject_field);
       li.append(sender_field);
+      li.append(subject_field);
+      li.append(date_field);
+      li.append(body_field);
+      
 
       inbox.append(li);
   
-    }); // closes $.each(geemails)
+    } // closes $.each(geemails)
 
- 
- $(document).ready(function(){
+  // var navArea = $('#nav-area');
 
-  $( "button" ).click(function() {
-  $( "p" ).toggle( "slow" );
-});
+  $('.mailMessageShow').click(function() {
+    $(this).find( "p" ).toggle( "slow" );
+  }); 
 
 
 
