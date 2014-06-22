@@ -29,15 +29,6 @@ img {
   font-size: 20px;
   width: 30%;
   float: left;
-  counter-increment: Counter;
-}
-
-#inboxCounter:after {
-  content: counter(Counter);
-}
-
-#inboxCounter: nth-child() {
-  counter-reset: (Counter);
 }
 
 

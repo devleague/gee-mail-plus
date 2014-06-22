@@ -1,22 +1,20 @@
 (function() {
 
     var newMessage = setInterval(displayNewMessage, 3000);
+    var getNewMessageFlag = true; //set flag for button
+
+    var inboxCount = 10;
     function displayNewMessage() {
-    //    // var getNewMessage = true;
-    // $('#stop_messages').click(function() {
-    //     count++;
+        if (getNewMessageFlag == true) {//if switch is on, get msgs
+           addMessageToEmailList(getNewMessage());//adds new msg
+           inboxCount++;
+           $('#inboxCounter').html(inboxCount);//increases inbox count
+           console.log(inboxCount);
+        }
+        
+    }
 
-    //     if (count = 1 || count % 2 !== 0) {
-    //         clearInterval(newMessage);
-    //     } else {
-    //         setInterval(displayNewMessage, 3000);
-    //     }
-    // });
-    //     addMessageToEmailList(getNewMessage());
-    // //};
-
-    
-
+    //populates inbox with 10 emails
     for (var i = 0; i < geemails.length; i++) {
         addMessageToEmailList(geemails[i]);
     };
@@ -27,13 +25,20 @@
         var sender_field = $('<span>' + message.sender + '</span>');
         var subject_field = $('<span>' + message.subject + '</span>');
         
-
         li.append(date_field);
         li.append(subject_field);
         li.append(sender_field);
 
         $('#emailList').append(li);
     };
+
+    $('#stop_messages').click(function() {//button to start/stop
+        if (getNewMessageFlag == true) {//if switch on...
+            getNewMessageFlag = false;//set to false to stop
+        } else {
+            getNewMessageFlag = true;//or if off, change to true to turn back on
+        } 
+    });
 
 })();
 
