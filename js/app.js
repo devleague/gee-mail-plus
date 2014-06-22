@@ -8,26 +8,32 @@
         if (getNewMessageFlag == true) {//if switch is on, get msgs
            addMessageToEmailList(getNewMessage());//adds new msg
            inboxCount++;
-           $('#inboxCounter').html(inboxCount);//increases inbox count
+           $('#inboxCounter').html(inboxCount);//displays increase of inbox count
            console.log(inboxCount);
-        }
-        
+        }    
     }
 
-    //populates inbox with 10 emails
+    //populates inbox with 10 emails onload
     for (var i = 0; i < geemails.length; i++) {
         addMessageToEmailList(geemails[i]);
     };
 
-    function addMessageToEmailList(message) {
+    function addMessageToEmailList(message) {//creates new li
         var li = $('<li></li>');
-        var date_field = $('<span>' + message.date + '</span>');
-        var sender_field = $('<span>' + message.sender + '</span>');
-        var subject_field = $('<span>' + message.subject + '</span>');
-        
+        var date_field = $('<span class="message_date">' + message.date + '</span>');
+        var sender_field = $('<span class="message_sender">' + message.sender + '</span>');
+        var subject_field = $('<span class="message_subject">' + message.subject + '</span>');
+        var body_field = $('<div class="message_body">' + message.body + '</div>');
+        body_field.hide();
+
+        li.click(function() {
+          console.log($(this).find('div.message_body').html());
+        })
+
         li.append(date_field);
         li.append(subject_field);
         li.append(sender_field);
+        li.append(body_field);
 
         $('#emailList').append(li);
     };
