@@ -6,44 +6,60 @@
   background-color: #EDCD54;
   width: 100%;
   float: right; 
-  letter-spacing: 50px;  
+  padding-bottom: 20px;  
+}
+.container h1 {
+  text-align: center;
+  padding-top: 40px;
+  font-size: 50px;
+  letter-spacing: 60px;
 }
 
 img {
   height: 150px;
-  width: 175px;
+  width: 195px;
   padding-top: 25px;
   float: left;
   padding-left: 25px;
 }
 
-#inbox {
+/*#inbox {
   font: Verdana;
   font-size: 20px;
   width: 10%;
   float: left;
-}
+}*/
 
-#inboxCounter {
+/*#inboxCounter {
   font: Verdana;
   font-size: 20px;
   width: 30%;
   float: left;
   counter-increment: Counter;
-}
+}*/
 
-#inboxCounter:after {
+/*#inboxCounter:after {
   content: counter(Counter);
-}
+}*/
 
-#inboxCounter: nth-child() {
+/*#inboxCounter: nth-child() {
   counter-reset: (Counter);
+}*/
+
+#Inbox {
+  text-transform: uppercase;
+  font-family: Veranda;
+  font-size: 20px;
+  padding-top: 5px; 
 }
 
 .second_row {
   background-color: #B9D7D9;
   width: 100%;
+  height: 75px;
   float: left;
+  margin-top: 5px;
+  margin-bottom: 75px;
 }
 
 #date {
@@ -51,16 +67,16 @@ img {
   font-size: 20px;
   width: 30%;
   float: left;
-  display: inline;
   text-transform: uppercase;
+  padding-top: 5px;
 }
 
 #subject {
   font: Verdana;
   font-size: 20px;
   width: 40%;
-  display: inline;
   text-transform: uppercase;
+  padding-top: 5px;
 }
 
 #sender {
@@ -68,8 +84,8 @@ img {
   font-size: 20px;
   width: 30%;
   float: right;
-  display: inline;
   text-transform: uppercase;
+  padding-top: 5px;
 }
 
 #theSubject {
@@ -90,6 +106,10 @@ img {
 .third_row {
   width: 100%;
   float: left;
+  height: 5px;
+}
+#placeholder {
+  text-transform: uppercase;
 }
 
 #dates {
