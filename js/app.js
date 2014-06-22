@@ -1,15 +1,21 @@
 (function() {
 
-    console.log(getNewMessage());
-    for (var i = 0; i < geemails.length; i++) {
-        myMessage(geemails[i]);
-    }
-
-
     var newMessage = setInterval(displayNewMessage, 3000);
     function displayNewMessage() {
-        addMessageToEmailList(getNewMessage());
-    };
+    //    // var getNewMessage = true;
+    // $('#stop_messages').click(function() {
+    //     count++;
+
+    //     if (count = 1 || count % 2 !== 0) {
+    //         clearInterval(newMessage);
+    //     } else {
+    //         setInterval(displayNewMessage, 3000);
+    //     }
+    // });
+    //     addMessageToEmailList(getNewMessage());
+    // //};
+
+    
 
     for (var i = 0; i < geemails.length; i++) {
         addMessageToEmailList(geemails[i]);
@@ -18,8 +24,9 @@
     function addMessageToEmailList(message) {
         var li = $('<li></li>');
         var date_field = $('<span>' + message.date + '</span>');
-        var subject_field = $('<span>' + message.subject + '</span>');
         var sender_field = $('<span>' + message.sender + '</span>');
+        var subject_field = $('<span>' + message.subject + '</span>');
+        
 
         li.append(date_field);
         li.append(subject_field);
