@@ -1,35 +1,46 @@
 
 (function () {
 
-    var inbox = $('#inbox');
-    var inBoxCount = $('#inBoxCounter');
-
-    setTimeout(getNewMessage(){
-
-      alert("Hello")}, 3000);
-
-    for(var i= 0; i < geemails.length; i++){
-      console.log(i);
-
-      var li = $('<li class="mailMessageShow"></li>');
-          
-      var sender_field = $('<span>' + geemails[i].sender + '</span>');
-      var date_field = $('<span>' + geemails[i].date + '</span>');
-      var subject_field = $('<span>' + geemails[i].subject + '</span>');
-      var body_field = $('<p>' + geemails[i].body + '</p>')
-
-      li.append(sender_field);
-      li.append(subject_field);
-      li.append(date_field);
-      li.append(body_field);
-      
-      inbox.append(li);
-
-      // inBoxCount.append.html[i];
+  var inbox = $('#inbox');
+  var inBoxCount = $('#inBoxCounter');
+  inboxCount = "10";
+  var inboxCount2;
   
-    } // closes $.each(geemails)
+ 
 
-  $('.mailMessageShow').click(function() {
+ for(var i= 0; i < geemails.length; i++){
+    metaContent(geemails[i]);
+  }
+
+  function metaContent(message){
+
+  var li = $('<li></li>');
+        
+  var sender_field = $('<span>' + message.sender + '</span>');
+  var date_field = $('<span>' + message.date + '</span>');
+  var subject_field = $('<span>' + message.subject + '</span>');
+  var body_field = $('<p>' + message.body + '</p>')
+
+  li.append(sender_field);
+  li.append(subject_field);
+  li.append(date_field);
+  li.append(body_field);
+
+  li.click(function() {
     $(this).find( "p" ).toggle( "slow" );
-  }); 
+  });  
+
+  inbox.append(li);
+  } 
+
+  setInterval(function(){
+    inboxCount2 = inBoxCount++;
+    console.log(inboxCount2);
+    metaContent(getNewMessage());
+  }
+  , 1000);
+   
+
+  
+
 })();  
