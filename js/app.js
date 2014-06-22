@@ -26,8 +26,9 @@
         var body_field = $('<div class="message_body">' + message.body + '</div>');
         body_field.hide();
 
-        li.click(function() {
-          console.log($(this).find('div.message_body').html());
+        li.click(function() {//click li to get specific msg
+          console.log($(this).find('div.message_body').html());//clicking on 'this', find the div
+          //class message_body and place that specific content into .html.  can be used for all fields
         })
 
         li.append(date_field);
