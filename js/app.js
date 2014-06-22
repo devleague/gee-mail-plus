@@ -18,18 +18,11 @@
       li.append(date_field);
       li.append(body_field);
       
-
       inbox.append(li);
   
     } // closes $.each(geemails)
 
-  // var navArea = $('#nav-area');
-
   $('.mailMessageShow').click(function() {
     $(this).find( "p" ).toggle( "slow" );
   }); 
-
-
-
-
 })();  
