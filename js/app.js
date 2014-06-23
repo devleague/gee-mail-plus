@@ -2,10 +2,8 @@
 (function () {
 
   var inbox = $('#inbox');
-  var inBoxCount = $('#inBoxCounter');
-  inboxCount = "10";
-  var inboxCount2;
-  
+  // var counter = $('<div id="counter"><div>')
+    
  
 
  for(var i= 0; i < geemails.length; i++){
@@ -33,14 +31,16 @@
   inbox.append(li);
   } 
 
+  var counter = 10;
+  function inBoxCounter(){
+    counter++;
+    $("h1").replaceWith('<h1>' + "You have " + counter + " unread messages" + '</h1>');
+  }
+
   setInterval(function(){
-    inboxCount2 = inBoxCount++;
-    console.log(inboxCount2);
     metaContent(getNewMessage());
+    inBoxCounter();
   }
   , 1000);
    
-
-  
-
 })();  
