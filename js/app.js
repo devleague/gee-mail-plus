@@ -2,7 +2,6 @@
 (function () {
 
   var inbox = $('#inbox');
-  // var counter = $('<div id="counter"><div>')
     
  
 
@@ -22,13 +21,12 @@
   li.append(sender_field);
   li.append(subject_field);
   li.append(date_field);
-  // li.append(body_field);
 
   li.click(function() {
-    li.append(body_field)
     $(this).find( "p" ).toggle( "slow" );
+    li.append(body_field);
   });  
-  
+
   inbox.append(li);
   
   } 
@@ -43,6 +41,6 @@
     metaContent(getNewMessage());
     inBoxCounter();
   }
-  , 1000);
+  , 30000);
 
 })();  
