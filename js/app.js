@@ -27,11 +27,14 @@
         body_field.hide();
 
         li.click(function() {//click li to get specific msg
-          console.log($(this).find('div.message_body').html());//clicking on 'this', find the div
-          //class message_body and place that specific content into .html.  can be used for all fields
+          console.log($(this).find('div.message_body').html());//clicking on 'this' li, find the div
+          //class message_body and place that specific content into .html.  can be used for all date
+          //sender, subject fields
+          $(this).find('div.message_body').toggle();
+          //$('emailList').toggle($(this).find('div.message_body').html());
         })
 
-        li.append(date_field);
+        li.append(date_field);//gets new date, etc info for li
         li.append(subject_field);
         li.append(sender_field);
         li.append(body_field);
