@@ -22,13 +22,15 @@
   li.append(sender_field);
   li.append(subject_field);
   li.append(date_field);
-  li.append(body_field);
+  // li.append(body_field);
 
   li.click(function() {
+    li.append(body_field)
     $(this).find( "p" ).toggle( "slow" );
   });  
-
+  
   inbox.append(li);
+  
   } 
 
   var counter = 10;
