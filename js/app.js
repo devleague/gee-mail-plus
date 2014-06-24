@@ -30,6 +30,14 @@
     inbox.append(li);
 
     li.addClass("message-row");
+    // li.attr('type', 'radio');
+
+    var radioButton = $('<input type="radio"/>');
+
+    radioButton.appendTo(li);
+    radioButton.click(function(){
+      li.remove()
+    });
   
   } 
 
@@ -43,7 +51,7 @@ setInterval(function(){
   metaContent(getNewMessage());
   inBoxCounter();
 }
-, 30000);
+, 10000);
 
 
 
