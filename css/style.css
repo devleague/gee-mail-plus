@@ -1,3 +1,8 @@
+body {
+
+	text-transform: uppercase;
+}
+
 span{
 	display: inline-block;
 	width: 30%;
@@ -27,5 +32,20 @@ h5{
 .header-style {
 	font-size: 20px;
 	font-style: bold underline;
+	text-align: center;
 
+}
+
+#header {
+	background-color: grey;
+	border-radius: 5px;
+
+}
+
+.message-row:hover {
+	background-color: #C0C0C0;
+}
+
+.message-row {
+	border-bottom: black solid 2px;
 }
