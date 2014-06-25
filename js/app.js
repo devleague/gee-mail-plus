@@ -30,9 +30,12 @@
           console.log($(this).find('div.message_body').html());//clicking on 'this' li, find the div
           //class message_body and place that specific content into .html.  can be used for all date
           //sender, subject fields
-          $(this).find('div.message_body').toggle();
-          //$('emailList').toggle($(this).find('div.message_body').html());
-        })
+          $(this).find('div.message_body').toggle();//msg appears/disappear with click
+          //$(this).find('div.message_body').dialog();
+          //$( "#emailList" ).modal();
+          //$(this).find('div.message_body')( "#dialog" ).dialog();
+
+        });
 
         li.append(date_field);//gets new date, etc info for li
         li.append(subject_field);
