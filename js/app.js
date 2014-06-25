@@ -34,7 +34,7 @@
 
     var radioButton = $('<input type="radio"/>');
 
-    radioButton.appendTo(li);
+    radioButton.prependTo(li);
     radioButton.click(function(){
       li.remove()
     });
@@ -56,3 +56,6 @@ setInterval(function(){
 
 
 })();  
+
+
+var deleteButton = $('<span id="delete"></span>')
