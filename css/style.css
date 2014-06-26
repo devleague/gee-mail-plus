@@ -16,6 +16,10 @@ img {
   height: 60px;
 }
 
+#plus {
+  color: yellow;
+}
+
 #stop_messages {
   float: right;
   width: 100px;
@@ -28,7 +32,7 @@ img {
   font-size: 30px;
   width: 10%;
   float: left;
-  border: 2px;
+  border-style: 2px;
 }
 
 #inboxCounter {
@@ -39,9 +43,16 @@ img {
   margin-top: -30px;
 }
 
+#messageCounter {
+  margin-left: 40px;
+  margin-top: -30px;
+  font-size: 20px;
+
+}
+
 
 .second_row {
-  background-color: #B9D7D9;
+  background-color: blue;
   width: 100%;
   float: left;
 }
@@ -70,8 +81,6 @@ img {
   display: inline;
 }
 
-
-
 .third_row {
   width: 100%;
   float: left;
@@ -82,8 +91,37 @@ img {
 }
 
 #emailList, li {
+  margin-left: -18px;
+}
+
+/*li:visited {
+  color: green;
+}*/
+
+li:hover, li:active {
+  font-size: 115%;
+  color: blue;
+}
+
+.message_date {
+  width: 30%;
+  display: inline;
+  float: left;
   margin-bottom: 15px;
-  margin-left: -20px;
+}
+
+.message_sender {
+  width: 30%;
+  display: inline;
+  float: left;
+  margin-bottom: 15px;
+}
+
+.message_subject {
+  width: 40%;
+  display: inline;
+  float: left;
+  margin-bottom: 15px;
 }
 
 .message_body {
@@ -113,21 +151,3 @@ img {
 }
 
 
-A:visited { 
-  color:black; 
-  text-decoration: none; 
-  font-weight: normal;
-}
-
-
-A:active { 
-  color: black; 
-  text-decoration:none;
-}
-
-
-A:hover {
-  color: blue; 
-  text-decoration: none; 
-  font-weight: none;
-}

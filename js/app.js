@@ -38,8 +38,8 @@
         });
 
         li.append(date_field);//gets new date, etc info for li
-        li.append(subject_field);
         li.append(sender_field);
+        li.append(subject_field);
         li.append(body_field);
 
         $('#emailList').append(li);
