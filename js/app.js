@@ -25,37 +25,43 @@
     li.click(function() {
       $(this).find( "p" ).toggle( "slow" );
       li.append(body_field);
+      inBoxCounter();
     });  
 
     inbox.append(li);
 
     li.addClass("message-row");
-    // li.attr('type', 'radio');
+
 
     var radioButton = $('<input type="radio"/>');
-
+   
     radioButton.prependTo(li);
     radioButton.click(function(){
       li.remove()
+      inBoxCounter();
     });
-  
+    
   } 
 
-var counter = 10;
+
+
+
 function inBoxCounter(){
-  counter++;
-  $("h1").replaceWith('<h1>' + "You have " + counter + " unread messages" + '</h1>');
+var n = $(".message-row").length; 
+  $("h1").replaceWith('<h1>' + "You have " + n + " messages" + '</h1>');
+  console.log(n);
 }
 
 setInterval(function(){
   metaContent(getNewMessage());
-  inBoxCounter();
+  // inBoxCounter();
 }
-, 10000);
+, 3000);
 
 
 
 })();  
 
+ 
 
 var deleteButton = $('<span id="delete"></span>')
