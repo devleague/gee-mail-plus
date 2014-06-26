@@ -23,12 +23,15 @@
     li.append(date_field);
 
     li.click(function() {
-      $(this).find( "p" ).toggle( "slow" );
-      li.append(body_field);
-      inBoxCounter();
+    $(this).find( "p" ).toggle( "slow" );
+    li.append(body_field);
+
+      
+
     });  
 
     inbox.append(li);
+
 
     li.addClass("message-row");
 
@@ -54,7 +57,7 @@ var n = $(".message-row").length;
 
 setInterval(function(){
   metaContent(getNewMessage());
-  // inBoxCounter();
+  inBoxCounter();
 }
 , 3000);
 
