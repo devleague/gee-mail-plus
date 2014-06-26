@@ -1,153 +1,175 @@
-.container {
-  font-size: 80px;
-  font-family: Arial;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  background-color: blue;
-  width: 100%;
-  margin-top: 20px;
+/* min-width 1025px, large screens */
+@media only screen and (min-width: 64.063em) {  
+
+
+  .container {
+    font-size: 80px;
+    font-family: Arial;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    background-color: blue;
+    width: 100%;
+    margin-top: 20px;
+
+  }
+
+
+  img {
+    width: 130px;
+    height: 60px;
+  }
+
+  #plus {
+    color: yellow;
+  }
+
+  /*#stop_messages {
+    float: right;
+    width: 180px;
+    height: 65px;
+    font-size: 15px;
+    text-align: center;
+  }*/
+
+  .stopLoadingMessages {
+    background-color: red;
+  }
+
+  #stop_messages {
+    margin-right: -347px;
+  }
+
+  .button {
+    float: right;
+  }
+
+  #inbox {
+    font: Verdana;
+    font-size: 30px;
+    width: 10%;
+    float: left;
+  }
+
+  #inboxCounter {
+    font: Verdana;
+    font-size: 20px;
+    width: 30%;
+    float: left;
+    margin-top: 18px;
+  }
+
+  #messageCounter {
+    margin-left: 40px;
+    margin-top: 18px;
+    font-size: 20px;
+
+  }
+
+  .second_row {
+    background-color: blue;
+    width: 100%;
+    float: left;
+  }
+
+  .second_row {
+    font-size: 20px;
+  }
+
+  /*.second_row h5 {
+    margin-left: 10px;
+  }*/
+
+  #theDate {
+    font: Verdana;
+    font-size: 20px;
+    padding-left: 30px;
+    margin-right: 0px;
+  }
+
+  #theSubject {
+    font: Verdana;
+    font-size: 20px;
+    padding-left: 20px;
+    margin-right: 0px;
+  }
+
+  #theSender {
+    font: Verdana;
+    font-size: 20px;
+    padding-left: 25px;
+    margin-right: 0px;
+  }
+
+  .third_row {
+    width: 100%;
+    float: left;
+  }
+
+  #emailList {
+    list-style-type: none;
+  }
+
+  #emailList, li {
+    /*margin-left: -18px;*/
+  }
+
+  #emailList li {
+    margin-bottom: 15px;
+    max-width: initial;
+  }
+
+  /*li:visited {
+    color: green;
+  }*/
+
+  li:hover, li:active {
+    font-size: 115%;
+    color: blue;
+  }
+
+  /*.message_date {
+    margin-bottom: 15px;
+  }
+
+  .message_sender {
+    width: 30%;
+    display: inline;
+    float: left;
+    margin-bottom: 15px;
+  }
+
+  .message_subject {
+    width: 40%;
+    display: inline;
+    float: left;
+    margin-bottom: 15px;
+  }
+*/
+  .message_body {
+    margin: 10px 0px 30px 0px;
+  }
+
+  #dates {
+    font: Verdana;
+    font-size: 20px;
+    width: 30%;
+    float: left;
+  }
+
+  #subjects {
+    font: Verdana;
+    font-size: 20px;
+    width: 30%;
+    float: left;
+
+  }
+
+  #senders {
+    font: Verdana;
+    font-size: 20px;
+    width: 30%;
+    float: left;
+  }
 
 }
-
-
-img {
-  width: 130px;
-  height: 60px;
-}
-
-#plus {
-  color: yellow;
-}
-
-#stop_messages {
-  float: right;
-  width: 100px;
-  height: 35px;
-
-}
-
-#inbox {
-  font: Verdana;
-  font-size: 30px;
-  width: 10%;
-  float: left;
-  border-style: 2px;
-}
-
-#inboxCounter {
-  font: Verdana;
-  font-size: 20px;
-  width: 30%;
-  float: left;
-  margin-top: -30px;
-}
-
-#messageCounter {
-  margin-left: 40px;
-  margin-top: -30px;
-  font-size: 20px;
-
-}
-
-
-.second_row {
-  background-color: blue;
-  width: 100%;
-  float: left;
-}
-
-#theDate {
-  font: Verdana;
-  font-size: 20px;
-  width: 30%;
-  float: left;
-  display: inline;
-}
-
-#theSubject {
-  font: Verdana;
-  font-size: 20px;
-  width: 40%;
-  float: left;
-  display: inline;
-}
-
-#theSender {
-  font: Verdana;
-  font-size: 20px;
-  width: 30%;
-  float: left;
-  display: inline;
-}
-
-.third_row {
-  width: 100%;
-  float: left;
-}
-
-#emailList {
-  list-style-type: none;
-}
-
-#emailList, li {
-  margin-left: -18px;
-}
-
-/*li:visited {
-  color: green;
-}*/
-
-li:hover, li:active {
-  font-size: 115%;
-  color: blue;
-}
-
-.message_date {
-  width: 30%;
-  display: inline;
-  float: left;
-  margin-bottom: 15px;
-}
-
-.message_sender {
-  width: 30%;
-  display: inline;
-  float: left;
-  margin-bottom: 15px;
-}
-
-.message_subject {
-  width: 40%;
-  display: inline;
-  float: left;
-  margin-bottom: 15px;
-}
-
-.message_body {
-  margin: 10px 0px 30px 0px;
-}
-
-#dates {
-  font: Verdana;
-  font-size: 20px;
-  width: 30%;
-  float: left;
-}
-
-#subjects {
-  font: Verdana;
-  font-size: 20px;
-  width: 30%;
-  float: left;
-
-}
-
-#senders {
-  font: Verdana;
-  font-size: 20px;
-  width: 30%;
-  float: left;
-}
-
-

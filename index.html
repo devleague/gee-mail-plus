@@ -3,53 +3,60 @@
 <html>
 	<head>
 		<script src="js/mail-generator.js"></script>
-		<link href="css/style.css" rel="stylesheet" media="screen">
-    
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <script src="js/vendor/modernizr.js"></script>
 
 	</head>
 
 
 	<body>
-    <div class="container" id="main">
-      <img src="http://www.exacttarget.com/blog/wp-content/uploads/2014/06/email_icon.jpeg"><em>Gee-</em><strong>Mail</strong><strong id="plus">&#43</strong>
-    </div>
+    <header>
+      <!-- <div class="row"> -->
+      <!-- foundation puts into container so becomes more narrow -->
+          <div class="container" id="main">
+          <img src="http://www.exacttarget.com/blog/wp-content/uploads/2014/06/email_icon.jpeg"><em>Gee-</em><strong>Mail</strong><strong id="plus">&#43</strong>
+        </div>
+      <!-- </div> -->
+    </header>
 
-    <button id ="stop_messages">Load/Stop Messages</button>
+    <div class="large-9 medium-12 small-12 columns">
+      <!-- <button id ="stop_messages">Load/Stop Messages</button> -->
+      <a href="#" id="stop_messages" class="button [tiny small large]">Load/Stop Messages</a>
 
-    <!-- For printing inbox count -->
-    <div id="inbox"><h5><strong>Inbox</strong></h5>
-      <div id="inboxCounter"></div>
-      <div id="messageCounter">Messages</div>
-    </div>
-    
+      <!-- For printing inbox count -->
+      <div id="inbox"><strong>Inbox</strong>
+        <div id="inboxCounter"></div>
+        <div id="messageCounter">Messages</div>
+      </div>
+    </div><!-- end div class large-9 -->
 
     <div class="second_row">
 
-      <div id="theDate"><h5><strong>Date</strong></h5></div>
+      <div id="theDate" class="medium-4 medium-offset-1 columns"><h5><strong>Date</strong></h5></div>
 
-      <div id="theSender"><h5><strong>Sender</strong></h5></div>
+      <div id="theSender" class="medium-3 columns"><h5><strong>Sender</strong></h5></div>
 
-      <div id="theSubject"><h5><strong>Subject</strong></h5></div>
+      <div id="theSubject" class="medium-4 columns"><h5><strong>Subject</strong></h5></div>
 
     </div>
     
     <div class="third_row"id="emailContainer"> 
       <ul id="emailList">
-        
+
       </ul>
       <ul id="newEmailDate">
           
       </ul>
     </div>
     <!-- create table or divs with spans for above -->
-  
     
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
 
-
-
-
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="/js/app.js"></script>
 
   </body>

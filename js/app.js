@@ -19,10 +19,10 @@
     };
 
     function addMessageToEmailList(message) {//creates new li
-        var li = $('<li></li>');
-        var date_field = $('<span class="message_date">' + message.date + '</span>');
-        var sender_field = $('<span class="message_sender">' + message.sender + '</span>');
-        var subject_field = $('<span class="message_subject">' + message.subject + '</span>');
+        var li = $('<li data-read-at="" class="unread_message row"></li>');
+        var date_field = $('<span class="message_date medium-4 columns">' + message.date + '</span>');
+        var sender_field = $('<span class="message_sender medium-3 columns">' + message.sender + '</span>');
+        var subject_field = $('<span class="message_subject medium-4 columns">' + message.subject + '</span>');
         var body_field = $('<div class="message_body">' + message.body + '</div>');
         body_field.hide();
 
@@ -31,12 +31,14 @@
           //class message_body and place that specific content into .html.  can be used for all date
           //sender, subject fields
           $(this).find('div.message_body').toggle();//msg appears/disappear with click
-          //$(this).find('div.message_body').dialog();
-          //$( "#emailList" ).modal();
-          //$(this).find('div.message_body')( "#dialog" ).dialog();
+          $(this).removeClass('unread_message');
+            if ($(this).attr('data-read-at') == "") {
+              $(this).attr('data-read-at', Date.now());
+              $(this).css('color','gray');
+            }
 
         });
-
+        li.append('<input id="deleteButton type="radio" class="medium-1 columns">')
         li.append(date_field);//gets new date, etc info for li
         li.append(sender_field);
         li.append(subject_field);
@@ -45,11 +47,17 @@
         $('#emailList').append(li);
     };
 
+    $('#deleteButton').click(function() {//delete email function
+      
+    }  
+
     $('#stop_messages').click(function() {//button to start/stop
         if (getNewMessageFlag == true) {//if switch on...
             getNewMessageFlag = false;//set to false to stop
+            $(this).addClass("stopLoadingMessages");
         } else {
             getNewMessageFlag = true;//or if off, change to true to turn back on
+            $(this).removeClass("stopLoadingMessages");
         } 
     });
 
