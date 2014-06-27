@@ -28,13 +28,13 @@ for(var i = 0; i<geemails.length; i++){
 
 }
 
+
 	//show an inbox count that shows the current number of messages//
 	var countEmail = $(".email").length;
-	console.log(countEmail);
+	// var inbox_counter = document.getElementById("inbox_counter");
+	// inbox_counter.innerHTML = countEmail;
 
-
-
-
+	document.getElementById("inbox_counter").innerHTML = countEmail;
 
 
 
