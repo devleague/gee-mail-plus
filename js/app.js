@@ -49,7 +49,7 @@
         li.append(subject_field);
         li.append(body_field);
 
-        $('#emailList').append(li);
+        $('#emailList').prepend(li);
 
         //delete email function
         deleteButton.click(function() {
