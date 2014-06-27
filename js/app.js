@@ -6,25 +6,39 @@ for(var i = 0; i<geemails.length; i++){
 	console.log(mail.body)
 
 
-var emailContainer = $("<div></div>");
-var emailSender = $("<h3>"+ mail.sender +"</h3>");
-var emailSubject = $("<p>"+ mail.subject +"</p>");
-var emailDate = $("<p>"+ mail.date +"</p>");
-var emailBody = $("<p>"+ mail.body +"</p>").hide();
+	var emailContainer = $("<div class='email'></div>");
+	var emailSender = $("<h3>"+ mail.sender +"</h3>");
+	var emailSubject = $("<p>"+ mail.subject +"</p>");
+	var emailDate = $("<p>"+ mail.date +"</p>");
+	var emailBody = $("<p class='messagebody'>"+ mail.body +"</p>").hide();
 
+	emailSubject.click(function() {
+		console.log();
+	});
 
-$(emailContainer)
-	.append(emailSender)
-	.append(emailSubject)
-	.append(emailDate)
-	.append(emailBody)
+	$(emailContainer)
+		.append(emailSender)
+		.append(emailSubject)
+		.append(emailDate)
+		.append(emailBody)
 
-$(".messages").append(emailContainer);
-
-
-// $("<h3 id=\"email" + i + "\">" +(mail.sender)+"</h3>").appendTo($("body"))
-// $("<p>"+(mail.subject)+"</p>").appendTo($("body"))
-// $("<p>"+(mail.date)+"</p>").appendTo($("body"))
-// $("<h3>"+(mail.body)+"</h3>").appendTo($("body"))
+	$(".messages").append(emailContainer);
 
 }
+
+
+
+//create an array to store if messages have been read or not//
+// var messages = [];
+
+// function mail(message){
+
+// message.read = null;
+
+// messages.push(message)
+
+// }
+
+// $("p").click(function (){
+// 	.show('messagebody');
+
