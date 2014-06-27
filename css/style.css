@@ -25,16 +25,25 @@
     color: yellow;
   }
 
+  .large-12 {
+    width: 1440px;
+  }
+
   .stopLoadingMessages {
     background-color: red;
   }
 
-  #stop_messages {
-    margin-right: -347px;
+  #counterRow {
+    margin-right: 0px;
+    margin-left: 0px;
   }
 
   .button {
     float: right;
+  }
+
+  #inboxLabel {
+    margin-left: -42px;
   }
 
   #inbox {
@@ -42,6 +51,7 @@
     font-size: 30px;
     width: 10%;
     float: left;
+    margin-bottom: 5px;
   }
 
   #inboxCounter {
@@ -49,7 +59,8 @@
     font-size: 20px;
     width: 30%;
     float: left;
-    margin-top: 18px;
+    margin-top: 48px;
+    margin-left: 6px;
   }
 
   #messageCounter {
@@ -68,10 +79,6 @@
   .second_row {
     font-size: 20px;
   }
-
-  /*.second_row h5 {
-    margin-left: 10px;
-  }*/
 
   #theDate {
     font: Verdana;
@@ -117,33 +124,11 @@
     max-width: initial;
   }
 
-  /*li:visited {
-    color: green;
-  }*/
-
   li:hover, li:active {
     font-size: 115%;
     color: blue;
   }
 
-  /*.message_date {
-    margin-bottom: 15px;
-  }
-
-  .message_sender {
-    width: 30%;
-    display: inline;
-    float: left;
-    margin-bottom: 15px;
-  }
-
-  .message_subject {
-    width: 40%;
-    display: inline;
-    float: left;
-    margin-bottom: 15px;
-  }
-*/
   .message_body {
     margin: 10px 0px 30px 0px;
   }
