@@ -43,7 +43,7 @@
 
     checkbox.prependTo(li);
 
-    checkbox.click(function(){ // TO DO: make into 1 event, not 2
+    checkbox.click(function(){
       $(this).addClass("checked");
       //console.log($(".checked").length);
       });
