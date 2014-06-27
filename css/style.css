@@ -46,4 +46,6 @@ h5{
 	background-color: #C0C0C0;
 }
 
-
+.unread_message {
+	font-weight: bold; 
+}

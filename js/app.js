@@ -3,7 +3,7 @@
 
   var inbox = $('#inbox');
     
- 
+ // var messages = [];
 
  for(var i= 0; i < geemails.length; i++){
     metaContent(geemails[i]);
@@ -11,7 +11,10 @@
 
   function metaContent(message){
 
-    var li = $('<li></li>');
+    // message.read = null;
+    // message.push[messages]
+
+    var li = $('<li data-read-at= "" class="unread_message"></li>');
           
     var sender_field = $('<span>' + message.sender + '</span>');
     var date_field = $('<span>' + message.date + '</span>');
@@ -23,11 +26,13 @@
     li.append(date_field);
 
     li.click(function() {
-    $(this).find( "p" ).toggle( "slow" );
-    li.append(body_field);
-
-      
-
+      console.log("click");
+      $(this).find( "p" ).toggle( "slow" );
+      li.append(body_field);
+      $(this).removeClass("unread_message");
+        if (($this).attr('data-read-at') == ""){
+            $(this).attr('data-read-at', Date.now());
+        }
     });  
 
     inbox.append(li);
@@ -36,7 +41,7 @@
     li.addClass("message-row");
 
 
-    var radioButton = $('<input type="radio"/>');
+    var radioButton = $('<input type="checkbox"/>');
    
     radioButton.prependTo(li);
     radioButton.click(function(){
