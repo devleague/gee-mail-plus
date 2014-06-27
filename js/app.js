@@ -66,12 +66,8 @@ setInterval(function(){
   metaContent(getNewMessage());
   inBoxCounter();
 }
-, 10000);
+, 8000);
 
 
 
 })();  
-
- 
-
-var deleteButton = $('<span id="delete"></span>')
