@@ -20,7 +20,7 @@
         addMessageToEmailList(geemails[i]);
     };
 
-    function addMessageToEmailList(message) {//creates new li
+    function addMessageToEmailList(message) {//creates new li##### get rid of row below
         var li = $('<li data-read-at="" class="unread_message row"></li>');
         var date_field = $('<span class="message_date medium-4 columns">' + message.date + '</span>');
         var sender_field = $('<span class="message_sender medium-3 columns">' + message.sender + '</span>');
