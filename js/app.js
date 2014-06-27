@@ -12,11 +12,11 @@ for(var i = 0; i<geemails.length; i++){
 	var emailDate = $("<p class='email_date'>"+ mail.date +"</p>");
 	var emailBody = $("<p id='email_body'>"+ mail.body +"</p>").hide();
 
-
+	//upon clicking any part of emailContainer, find the email body and show it on the page//
 	emailContainer.click(function(){
 		$(this).find('#email_body').show();
 	});
-	
+
 
 	$(emailContainer)
 		.append(emailSender)
@@ -27,6 +27,23 @@ for(var i = 0; i<geemails.length; i++){
 	$(".messages").append(emailContainer);
 
 }
+
+	//show an inbox count that shows the current number of messages//
+	var countEmail = $(".email").length;
+	console.log(countEmail);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
