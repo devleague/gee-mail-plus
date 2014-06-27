@@ -42,7 +42,7 @@
             }
 
         });
-        var deleteButton = $('<button class="deleteButton medium-1 columns">delete</button>');
+        var deleteButton = $('<button class="round deleteButton medium-1 columns">Delete</button>');
         li.append(deleteButton);
         li.append(date_field);//gets new date, etc info for li
         li.append(sender_field);
