@@ -30,7 +30,7 @@
       $(this).find( "p" ).toggle( "slow" );
       li.append(body_field);
       $(this).removeClass("unread_message");
-        if (($this).attr('data-read-at') == ""){
+        if ($(this).attr('data-read-at') == ""){
             $(this).attr('data-read-at', Date.now());
         }
     });  
@@ -42,11 +42,15 @@
     var checkbox = $('<input type="checkbox"/>');
 
     checkbox.prependTo(li);
+
     checkbox.click(function(){ // TO DO: make into 1 event, not 2
-      $("button").click(function(){
-        checked.remove();
-        inBoxCounter();
+      $(this).addClass("checked");
+      //console.log($(".checked").length);
       });
+
+    $("button").click(function(){
+      $(".checked").closest(li).remove();
+      inBoxCounter();
     });
 
   };
@@ -55,7 +59,7 @@
 function inBoxCounter(){
 var n = $(".message-row").length; 
   $("h1").replaceWith('<h1>' + "You have " + n + " messages" + '</h1>');
-  console.log(n);
+  //console.log(n);
 };
 
 setInterval(function(){
