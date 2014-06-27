@@ -11,7 +11,9 @@
            $('#inboxCounter').html(inboxCount);//displays increase of inbox count
            console.log(inboxCount);
         }    
-    }
+    };
+    // ####################################
+    // //delete email function
 
     //populates inbox with 10 emails onload
     for (var i = 0; i < geemails.length; i++) {
@@ -34,22 +36,27 @@
           $(this).removeClass('unread_message');
             if ($(this).attr('data-read-at') == "") {
               $(this).attr('data-read-at', Date.now());
-              $(this).css('color','gray');
+              $(this).css('color','#ADFF2F');
             }
 
         });
-        li.append('<input id="deleteButton type="radio" class="medium-1 columns">')
+        var deleteButton = $('<button class="deleteButton medium-1 columns">delete</button>');
+        li.append(deleteButton);
         li.append(date_field);//gets new date, etc info for li
         li.append(sender_field);
         li.append(subject_field);
         li.append(body_field);
 
         $('#emailList').append(li);
+
+        
+        deleteButton.click(function() {
+          alert("deleting mail");
+          $(this).closest("li").remove();
+        });
     };
 
-    $('#deleteButton').click(function() {//delete email function
-      
-    }  
+     
 
     $('#stop_messages').click(function() {//button to start/stop
         if (getNewMessageFlag == true) {//if switch on...
