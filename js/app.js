@@ -7,14 +7,16 @@ for(var i = 0; i<geemails.length; i++){
 
 
 	var emailContainer = $("<div class='email'></div>");
-	var emailSender = $("<h3>"+ mail.sender +"</h3>");
-	var emailSubject = $("<p>"+ mail.subject +"</p>");
-	var emailDate = $("<p>"+ mail.date +"</p>");
-	var emailBody = $("<p class='messagebody'>"+ mail.body +"</p>").hide();
+	var emailSender = $("<h3 class='email_sender'>"+ mail.sender +"</h3>");
+	var emailSubject = $("<p id='email_subject'>"+ mail.subject +"</p>");
+	var emailDate = $("<p class='email_date'>"+ mail.date +"</p>");
+	var emailBody = $("<p id='email_body'>"+ mail.body +"</p>").hide();
 
-	emailSubject.click(function() {
-		console.log();
+
+	emailContainer.click(function(){
+		$(this).find('#email_body').show();
 	});
+	
 
 	$(emailContainer)
 		.append(emailSender)
