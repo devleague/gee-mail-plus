@@ -3,18 +3,18 @@
     var newMessage = setInterval(displayNewMessage, 3000);
     var getNewMessageFlag = true; //set flag for button
 
-    var inboxCount = 10;
     function displayNewMessage() {
         if (getNewMessageFlag == true) {//if switch is on, get msgs
            addMessageToEmailList(getNewMessage());//adds new msg
-           inboxCount++;
-           $('#inboxCounter').html(inboxCount);//displays increase of inbox count
-           console.log(inboxCount);
+           updateInboxCount();//displays increase of inbox count
         }    
     };
-    // ####################################
-    // //delete email function
 
+    function updateInboxCount() {
+      // count number of messages and displays number of messages
+      $('#inboxCounter').html($('#emailList>li').length);    
+    }
+ 
     //populates inbox with 10 emails onload
     for (var i = 0; i < geemails.length; i++) {
         addMessageToEmailList(geemails[i]);
@@ -27,6 +27,8 @@
         var subject_field = $('<span class="message_subject medium-4 columns">' + message.subject + '</span>');
         var body_field = $('<div class="message_body">' + message.body + '</div>');
         body_field.hide();
+
+        console.log($('#emailList>li').length);
 
         li.click(function() {//click li to get specific msg
           console.log($(this).find('div.message_body').html());//clicking on 'this' li, find the div
@@ -49,10 +51,10 @@
 
         $('#emailList').append(li);
 
-        
+        //delete email function
         deleteButton.click(function() {
-          alert("deleting mail");
           $(this).closest("li").remove();
+          updateInboxCount();
         });
     };
 
