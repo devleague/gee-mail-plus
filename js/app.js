@@ -2,12 +2,11 @@
 (function () {
 
   var inbox = $('#inbox');
-    
- 
 
- for(var i= 0; i < geemails.length; i++){
+
+  for(var i= 0; i < geemails.length; i++){
     metaContent(geemails[i]);
-  }
+  };
 
   function metaContent(message){
 
@@ -25,7 +24,6 @@
     li.click(function() {
       $(this).find( "p" ).toggle( "slow" );
       li.append(body_field);
-      inBoxCounter();
     });  
 
     inbox.append(li);
@@ -33,30 +31,32 @@
     li.addClass("message-row");
 
 
-    var radioButton = $('<input type="radio"/>');
+    var checkbox = $('<input type="checkbox"/>');
+
+    var checked = 
    
-    radioButton.prependTo(li);
-    radioButton.click(function(){
-      li.remove()
-      inBoxCounter();
+    checkbox.prependTo(li);
+    checkbox.click(function(){ // TO DO: make into 1 event, not 2
+      $("button").click(function(){
+        checked.remove();
+        inBoxCounter();
+      });
     });
-    
-  } 
 
-
+  };
 
 
 function inBoxCounter(){
 var n = $(".message-row").length; 
   $("h1").replaceWith('<h1>' + "You have " + n + " messages" + '</h1>');
   console.log(n);
-}
+};
 
 setInterval(function(){
   metaContent(getNewMessage());
-  // inBoxCounter();
+  inBoxCounter();
 }
-, 3000);
+, 10000);
 
 
 
