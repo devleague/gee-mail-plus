@@ -33,6 +33,10 @@
     background-color: red;
   }
 
+  #stop_messages {
+
+  }
+
   #counterRow {
     margin-right: 0px;
     margin-left: 0px;
@@ -40,6 +44,7 @@
 
   .button {
     float: right;
+    max-width: 90%;
   }
 
   #inboxLabel {
