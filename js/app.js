@@ -1,43 +1,51 @@
-for(var i = 0; i<geemails.length; i++){ 
-	var mail=geemails[i]
-	console.log(mail.subject)
-	console.log(mail.date)
-	console.log(mail.sender)
-	console.log(mail.body)
+(function(){
 
+	for(var i = 0; i<geemails.length; i++){ 
+		different(geemails[i]);
+	};
 
-	var emailContainer = $("<div class='email'></div>");
-	var emailSender = $("<h3 class='email_sender'>"+ mail.sender +"</h3>");
-	var emailSubject = $("<p id='email_subject'>"+ mail.subject +"</p>");
-	var emailDate = $("<p class='email_date'>"+ mail.date +"</p>");
-	var emailBody = $("<p id='email_body'>"+ mail.body +"</p>").hide();
+	function different(mail){
+		var emailContainer = $("<div class='email'></div>");
+		var emailSender = $("<h3 class='email_sender'>"+ mail.sender +"</h3>");
+		var emailSubject = $("<p class='email_subject'>"+ mail.subject +"</p>");
+		var emailDate = $("<p class='email_date'>"+ mail.date +"</p>");
+		var emailBody = $("<p class='email_body'>"+ mail.body +"</p>").hide();
+	
+		$(emailContainer)
+			.append(emailSender)
+			.append(emailSubject)
+			.append(emailDate)
+			.append(emailBody)
+
+		$(".messages").append(emailContainer);
+	}
 
 	//upon clicking any part of emailContainer, find the email body and show it on the page//
-	emailContainer.click(function(){
-		$(this).find('#email_body').show();
+	$(".messages").on("click", ".email", function(){
+		$(this).find(".email_body").show();
 	});
 
-
-	$(emailContainer)
-		.append(emailSender)
-		.append(emailSubject)
-		.append(emailDate)
-		.append(emailBody)
-
-	$(".messages").append(emailContainer);
-
-}
-
-
 	//show an inbox count that shows the current number of messages//
-	var countEmail = $(".email").length;
-	// var inbox_counter = document.getElementById("inbox_counter");
-	// inbox_counter.innerHTML = countEmail;
+	function countEmail(){
+		var countEmail = $(".email").length;
+		document.getElementById("inbox_counter").innerHTML = countEmail;
 
-	document.getElementById("inbox_counter").innerHTML = countEmail;
+	}
 
 
+	// Set a recurring function to via the JavaScript setTimeout function that 
+	// will call a getNewMessage function that we have created for you that will 
+	// return a newly created message with the same properties as your previous messages.
+	// create a function that calls getNewMessage using setinterval
+	// the new messages are displaying in the console as Objects
 
+ 	setInterval(function(){
+ 		different(getNewMessage());
+ 		countEmail;
+ 	}, 10000);
+
+
+})();
 
 
 
