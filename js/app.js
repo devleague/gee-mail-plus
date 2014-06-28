@@ -53,7 +53,25 @@
       inBoxCounter();
     });
 
-  };
+
+
+    // WORK ON CHECK ALL FUNCTION
+
+    var checkall = $('<form id="checkall"/>');
+
+    checkall.click(function(){
+      //$(this).addClass("check_all");
+      $(".checkall").li.remove();
+    });
+/*
+    $("button").click(function(){
+      $(".check_all").li.remove();
+      inBoxCounter();
+    });  */ 
+
+
+
+  }; // ends function metaContent(message)
 
 
 function inBoxCounter(){
@@ -67,7 +85,6 @@ setInterval(function(){
   inBoxCounter();
 }
 , 8000);
-
 
 
 })();  
