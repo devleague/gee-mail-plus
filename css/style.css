@@ -192,10 +192,10 @@
     background-color: red;
   }
 
-  #stop_messages {
+  /*#stop_messages {
     margin-right: -347px;
   }
-
+*/
   .button {
     float: right;
   }
@@ -338,9 +338,9 @@
     background-color: red;
   }
 
-  #stop_messages {
+  /*#stop_messages {
     margin-right: -347px;
-  }
+  }*/
 
   .button {
     float: right;
