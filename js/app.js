@@ -1,5 +1,6 @@
 (function(){
 
+
 	for(var i = 0; i<geemails.length; i++){ 
 		different(geemails[i]);
 	};
@@ -18,20 +19,20 @@
 			.append(emailBody)
 
 		$(".messages").append(emailContainer);
+
 	}
+		countEmail();
 
 	//upon clicking any part of emailContainer, find the email body and show it on the page//
 	$(".messages").on("click", ".email", function(){
 		$(this).find(".email_body").show();
 	});
 
-	//show an inbox count that shows the current number of messages//
+	//inbox count that shows the current number of messages//
 	function countEmail(){
-		var countEmail = $(".email").length;
-		document.getElementById("inbox_counter").innerHTML = countEmail;
-
+		var totalEmail = $(".email").length;
+		document.getElementById("inbox_counter").innerHTML = totalEmail;
 	}
-
 
 	// Set a recurring function to via the JavaScript setTimeout function that 
 	// will call a getNewMessage function that we have created for you that will 
@@ -41,7 +42,7 @@
 
  	setInterval(function(){
  		different(getNewMessage());
- 		countEmail;
+ 		countEmail();
  	}, 10000);
 
 
